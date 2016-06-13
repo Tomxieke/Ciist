@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+
+    <com.ciist.customview.xlistview.CiistTitleView
+        android:id="@+id/service_titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myview:ciist_left_icn="@drawable/ciist_back"
+        myview:ciist_right_icn="@drawable/ciist_home_search_search"
+        myview:ciist_text_color="#FFF0F5"
+        myview:ciist_title_text="政务服务"
+        myview:ciist_titleview_bg="#d33336" />
+
+
+    <com.ciist.util.RefreshableView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/service_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2a2a2a"
+        android:orientation="vertical">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/service_scr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f8f8f8"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/service_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f8f8f8"
+                android:orientation="vertical">
+
+
+                <!--政务大图-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ciist_government_img" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/service_layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/service_seletor_search">
+
+                    <ImageView
+                        android:id="@+id/service_mage_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/ciist_home_search_search" />
+
+                    />
+                </RelativeLayout>
+
+
+                <!--网上预约办事-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="#ffffff"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingTop="20dp">-->
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/service_wangshangshenqing_rela"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/service_selector_gird">-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/service_wangshangshenqing_img"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:src="@drawable/ciist_government_icon_shenqing_s" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--android:layout_toRightOf="@id/service_wangshangshenqing_img"-->
+                <!--android:text="网上申请"-->
+                <!--android:textColor="#D33336"-->
+                <!--android:textSize="16sp" />-->
+                <!--</RelativeLayout>-->
+
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/service_wangshangyuyue_rela"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/service_selector_gird">-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/service_wangshangyuyue_img"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:src="@drawable/ciist_government_icon_yuyue_s" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--android:layout_toRightOf="@id/service_wangshangyuyue_img"-->
+                <!--android:text="网上预约"-->
+                <!--android:textColor="#D33336"-->
+                <!--android:textSize="16sp" />-->
+                <!--</RelativeLayout>-->
+                <!--</LinearLayout>-->
+
+
+                <!--咨询8个按钮-->
+                <LinearLayout
+                    android:id="@+id/service_layout_shidian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_weight="4"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingTop="20dp">-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/service_net_zixun_rela"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:background="@drawable/home_selector_ontouch">-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/service_net_zixun_img"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:background="@drawable/home_selector_ontouch"-->
+                    <!--android:src="@drawable/ciist_government_icon_zixun_s" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/service_net_zixun_img"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="网上咨询"-->
+                    <!--android:textColor="#333333"-->
+                    <!--android:textSize="14sp" />-->
+                    <!--</RelativeLayout>-->
+
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/service_banjianchaxun_rela"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:background="@drawable/home_selector_ontouch">-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/service_banjianchaxun_img"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:background="@drawable/home_selector_ontouch"-->
+                    <!--android:src="@drawable/ciist_government_icon_chaxun_s" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/service_banjianchaxun_img"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="办件查询"-->
+                    <!--android:textColor="#333333"-->
+                    <!--android:textSize="14sp" />-->
+
+
+                    <!--</RelativeLayout>-->
+
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/service_dianzijiancha_rela"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:background="@drawable/home_selector_ontouch">-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/service_dianzijiancha_img"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@drawable/home_selector_ontouch"-->
+                    <!--android:src="@drawable/ciist_government_icon_jiancha_s" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/service_dianzijiancha_img"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="电子监察"-->
+                    <!--android:textColor="#333333"-->
+                    <!--android:textSize="14sp" />-->
+
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/service_wangshangtoushu_rela"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:background="@drawable/home_selector_ontouch">-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/service_wangshangtoushu_img"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:background="@drawable/home_selector_ontouch"-->
+                    <!--android:src="@drawable/ciist_government_icon_toushu_s" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/service_wangshangtoushu_img"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="网上投诉"-->
+                    <!--android:textColor="#333333"-->
+                    <!--android:textSize="14sp" />-->
+
+
+                    <!--</RelativeLayout>-->
+
+
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="4"
+                        android:paddingBottom="20dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/service_banshizhinan_rela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_selector_ontouch"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp">
+
+                            <ImageView
+                                android:id="@+id/service_banshizhinan_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/home_selector_ontouch"
+                                android:src="@drawable/ciist_government_icon_banshi_s" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/service_banshizhinan_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="办事指南"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/service_falv_rela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_selector_ontouch"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp">
+
+                            <ImageView
+                                android:id="@+id/service_falv_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/home_selector_ontouch"
+                                android:src="@drawable/ciist_government_icon_falv_s" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/service_falv_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="法律法规"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/service_yijianzhengji_rela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_selector_ontouch"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp">
+
+                            <ImageView
+                                android:id="@+id/service_yijianzhengji_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/home_selector_ontouch"
+                                android:src="@drawable/ciist_government_icon_yijian_s" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/service_yijianzhengji_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="意见征集"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/service_xinxigongkai_rela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_selector_ontouch"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp">
+
+                            <ImageView
+                                android:id="@+id/service_xinxigongkai_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/home_selector_ontouch"
+                                android:src="@drawable/ciist_government_icon_xinxi_s" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/service_xinxigongkai_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="信息公开"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 广告模式 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/service_guanggao1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <!--最新公告-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#f8f8f8"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/service_zuixingonggao_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#d33336"
+                            myview:ciist_smalltitle_right_txt="更多"
+                            myview:ciist_smalltitle_title="最新公告"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+
+                            <com.ciist.customview.xlistview.ScrollListView
+                                android:id="@+id/service_zuixingonggao_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0.5dp"
+                                android:layout_marginTop="0.5dp"
+
+                                android:background="#ffffff">
+
+                            </com.ciist.customview.xlistview.ScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 广告模式 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/service_guanggao2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <!--热点服务排行-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="#dcdcdc"-->
+
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#dcdcdc"-->
+                <!--android:orientation="vertical">-->
+
+
+                <!--<com.ciist.customview.xlistview.CiistSmallTitle-->
+                <!--android:id="@+id/service_redianfuwupaihang_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#ffffff"-->
+                <!--myview:ciist_smalltitle_icon_color="#d33336"-->
+                <!--myview:ciist_smalltitle_title="热点服务排行"-->
+                <!--myview:ciist_smalltitle_txt_color="#333333"-->
+
+                <!--></com.ciist.customview.xlistview.CiistSmallTitle>-->
+
+
+                <!--<com.ciist.customview.xlistview.ScrollListView-->
+                <!--android:id="@+id/service_redianfuwupaihang_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="0.5dp"-->
+                <!--android:layout_marginTop="0.5dp"-->
+                <!--android:background="#ffffff"-->
+                <!--android:divider="#00000000"></com.ciist.customview.xlistview.ScrollListView>-->
+
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <!-- 广告模式 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/service_guanggao3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <!--快速服务通道-->
+
+                <!--<ImageView
+                    android:id="@+id/service_kuaisufuwutongdao_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/service_selecor_kuaisufuwu"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ciist_government_icon_tongdao_s" />-->
+
+                <!--个人办理-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+
+                    <com.ciist.customview.xlistview.CiistSmallTitle
+                        android:id="@+id/service_gerenbanli_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        myview:ciist_smalltitle_icon_color="#d33336"
+                        myview:ciist_smalltitle_title="个人办事"
+                        myview:ciist_smalltitle_txt_color="#333333"
+
+
+                        ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+
+                        <com.ciist.customview.xlistview.IGridView
+                            android:id="@+id/service_Igrid_geren"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="5dp"
+                            android:numColumns="3"
+                            android:padding="5dp"
+                            android:verticalSpacing="5dp"></com.ciist.customview.xlistview.IGridView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 广告模式 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/service_guanggao4"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <!--企业办理-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#f8f8f8"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#dcdcdc"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/service_qiyebanli_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#d33336"
+                            myview:ciist_smalltitle_title="企业办事"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+                        <com.ciist.customview.xlistview.IGridView
+                            android:id="@+id/service_Igrid_qiye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:horizontalSpacing="5dp"
+                            android:numColumns="3"
+                            android:padding="5dp"
+                            android:verticalSpacing="5dp"
+
+                            >
+
+
+                        </com.ciist.customview.xlistview.IGridView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 广告模式 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/service_guanggao5"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <!--办件公告-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="#f8f8f8"-->
+
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+
+                <!--android:background="#dcdcdc"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<com.ciist.customview.xlistview.CiistSmallTitle-->
+                <!--android:id="@+id/service_banjiangonggao_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#ffffff"-->
+                <!--myview:ciist_smalltitle_icon_color="#d33336"-->
+                <!--myview:ciist_smalltitle_right_txt="更多"-->
+                <!--myview:ciist_smalltitle_title="办件公告"-->
+                <!--myview:ciist_smalltitle_txt_color="#333333"-->
+
+                <!--></com.ciist.customview.xlistview.CiistSmallTitle>-->
+
+
+                <!--<com.ciist.customview.xlistview.ScrollListView-->
+                <!--android:id="@+id/service_banjiangongao_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="0.5dp"-->
+                <!--android:background="#ffffff"-->
+                <!--android:divider="#00000000"></com.ciist.customview.xlistview.ScrollListView>-->
+
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/home_linear_banquan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="@string/banquan"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/zhengfu"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_linear_banquan"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/riqi"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </com.ciist.util.RefreshableView>
+
+
+</LinearLayout>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <com.ciist.customview.xlistview.CiistTitleView
+        android:id="@+id/online_com_titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myview:ciist_left_icn="@drawable/ciist_back"
+        myview:ciist_text_color="#FFF0F5"
+        myview:ciist_title_text="网上投诉"
+        myview:ciist_titleview_bg="#d33336" />
+
+
+    <RadioGroup
+        android:id="@+id/online_com_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/menu_bg"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/online_com_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/menu_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="我要投诉"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/online_com_more_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/menu_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="已回复"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/online_com_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>

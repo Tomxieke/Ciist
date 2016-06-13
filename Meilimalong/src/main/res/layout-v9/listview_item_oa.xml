@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/id_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffcccccc"
+        android:gravity="center|right" >
+
+        <Button
+            android:id="@+id/id_remove"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_lable_promotion_orange"
+            android:text="删除"
+            android:textSize="18sp"
+            android:textColor="#fff" >
+        </Button>
+
+        <!--<Button
+            android:id="@+id/id_setTop"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/bg_lable_promotion_orange"
+            android:text="置顶"
+            android:textColor="#fff" >
+        </Button>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_view_oa_default_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+        <!--mulu layout-->
+        <LinearLayout
+            android:id="@+id/mulu_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/muluImgView"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|left" />
+
+            <TextView
+                android:id="@+id/muluTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:text=".com"
+                android:textColor="#383838"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <!--CCC-->
+        <LinearLayout
+            android:id="@+id/CCC_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/CCCImgView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_list1" />
+
+            <TextView
+                android:id="@+id/CCCTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="工作"
+                android:textColor="#383838"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+        <!--AAA-->
+        <LinearLayout
+            android:id="@+id/AAA_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/txtAAAFuncname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="承办工作"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtAAANews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:background="@color/red"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="0"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtAAATotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="共56项"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtAAAEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="完成10项"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/pbAAAprogressbar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:max="2"
+                        android:progress="1"
+                        android:progressDrawable="@drawable/progressbar" />
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+        <!--BBB-->
+        <LinearLayout
+            android:id="@+id/BBB__Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/BBBTextView_lef_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text=".com"
+                        android:textColor="#5E5E5E"
+                        android:textSize="13sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/BBBTextView_right_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:text=".com"
+                        android:textColor="#5E5E5E"
+                        android:textSize="13sp"></TextView>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BBBNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/red"
+                    android:paddingRight="5dp"
+                    android:text="新"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/BBBTextView_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="wassoft"
+                    android:textColor="#383838"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/BBBTextView_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:padding="0dp"
+                android:text="wassoft"
+                android:textColor="#5E5E5E"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

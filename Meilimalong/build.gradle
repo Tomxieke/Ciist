@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId 'com.ciist.app'
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 72
+        versionName "4.6.5"
+        multiDexEnabled true
+
+    }
+    //解决内存溢出
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    productFlavors {
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/jsoup-1.8.3.jar')
+    //    compile files('libs/umeng-update-v2.6.0.1.jar')
+
+    //    compile files('libs/AMap_Location_v2.0.0_20151117.jar')
+
+    //    compile files('libs/AMap_Navi_v1.4.0_20150916.jar')
+
+    //    compile files('libs/AMap_2DMap_v2.6.0_20150916.jar')
+
+    //    compile files('libs/AMap_Services_V2.5.0.jar')
+    compile files('libs/httpclient-4.5.1.jar')
+    compile files('libs/httpcore-4.4.4.jar')
+    compile files('libs/commons-logging-1.2.jar')
+    compile files('libs/commons-codec-1.10.jar')
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile files('libs/mpandroidchartlibrary-2-1-6.jar')
+    compile files('libs/httpclient-4.4.1.1.jar')
+    compile files('libs/android-async-http-1.4.9.jar')
+    compile files('libs/gson-1.6.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/PullRefreshListView.jar')
+    compile project(':imageSlider_viktor_library')
+    compile files('libs/hutils.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/need_lib.jar')
+    compile files('libs/patchupdate.jar')
+    compile files('libs/BDAutoUpdateSDK_20150605_V1.2.0.jar')
+    //    compile files('libs/AMap3DMap_3.3.1_AMapNavi_1.8.0_20160420.jar')
+    compile files('libs/AMap_2DMap_V2.8.0_20151231.jar')
+    compile files('libs/AMap_Android_3DMapSDK_V3.1.1.jar')
+    compile files('libs/AMap_Location_v2.3.0_20160112.jar')
+    compile files('libs/AMap_Navi_v1.7.0.1_20160203.jar')
+    compile files('libs/AMap_Search_V2.8.0_20160105.jar')
+    compile 'com.android.support:multidex:'
+    compile files('libs/Msc.jar')
+    compile files('libs/AMap3DMap_3.3.1_AMapNavi_1.8.0_20160420.jar')
+    compile files('libs/AMap_Android_3DMapSDK_V3.1.1.jar')
+}

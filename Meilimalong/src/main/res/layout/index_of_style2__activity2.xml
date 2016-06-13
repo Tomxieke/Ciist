@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.ciist.util.RefreshableView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_rootaaa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2a2a2a"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/indexOfStyle2Activity2Sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f9f9f9"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/home_weather_intent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/home_weather_qing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="6dp"
+                        android:text="多云"
+                        android:textColor="#20c993"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/home_weather_futrue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/home_weather_qing"
+                        android:layout_marginLeft="10dp"
+
+                        android:text="未来7天"
+                        android:textColor="#20c993"
+                        android:textSize="7sp" />
+
+                    <ImageView
+                        android:id="@+id/home_weather_ico_qing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/home_weather_futrue"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/home_weather_futrue"
+                       />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/home_weather_wendu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="10°C"
+                        android:textColor="#20c993"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/home_weather_xiangdui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/home_weather_wendu"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@id/home_weather_wendu"
+                        android:text="相对湿度："
+                        android:textColor="#20c993"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/home_weather_shidu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/home_weather_xiangdui"
+                        android:layout_toRightOf="@id/home_weather_xiangdui"
+                        android:text="46"
+                        android:textColor="#20c993"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/home_weather_fengsu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/home_weather_xiangdui"
+                        android:layout_below="@id/home_weather_xiangdui"
+                        android:text="西南风："
+                        android:textColor="#20c993"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/home_weather_fengsudengli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/home_weather_fengsu"
+                        android:layout_toRightOf="@id/home_weather_fengsu"
+                        android:text="三级"
+                        android:textColor="#20c993"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/home_erweima_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/ciist_home_androidmarket" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/home_layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ciist_home_logo"
+                    android:layout_centerInParent="true"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/home_seletor_search">
+
+                >
+
+                <ImageView
+                    android:id="@+id/home_image_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/ciist_home_search_search" />
+
+                />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/home_layout_shidian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#cccccc"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp"
+                    android:paddingTop="0.5dp"
+                    android:paddingBottom="0.5dp">
+
+                    <ImageView
+                        android:id="@+id/btnStyle2Index02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_news" />
+
+                    <ImageView
+                        android:id="@+id/btnStyle2Index22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_travel" />
+
+                    <ImageView
+                        android:id="@+id/btnStyle2Index12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_merchants" />
+
+                    <ImageView
+                        android:id="@+id/btnStyle2Index32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_agriculture" />
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2">
+
+
+
+                    <ImageView
+                        android:id="@+id/home_zhengwufuwu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_zhengwu_selector"
+           />
+
+                    <ImageView
+                        android:id="@+id/home_jiaoyidongdai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_jiaoyi_selector"
+                     />
+
+
+
+
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#cccccc"
+                android:orientation="vertical">
+
+                <!--<com.ciist.toolkits.AutoScrollViewPager-->
+                <!--android:id="@+id/indexOfStyle2vp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <FrameLayout
+                    android:id="@+id/adimageLinerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cccccc"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+                    <!--app:layout_scrollFlags="scroll|enterAlways"-->
+                    <!--<ViewFlipper-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:autoStart="true"-->
+                    <!--android:inAnimation="@android:anim/fade_in"-->
+                    <!--android:outAnimation="@android:anim/fade_out"-->
+                    <!--android:flipInterval="3000"-->
+                    <!--android:layout_height="160dp">-->
+                    <!--<include layout="@layout/layout_image_ad0"/>-->
+                    <!--<include layout="@layout/layout_image_ad1"/>-->
+                    <!--<include layout="@layout/layout_image_ad2"/>-->
+                    <!--<include layout="@layout/layout_image_ad3"/>-->
+                    <!--<include layout="@layout/layout_image_ad4"/>-->
+                    <!--<include layout="@layout/layout_image_ad5"/>-->
+                    <!--</ViewFlipper>-->
+                    <!--<com.ciist.toolkits.AutoScrollViewPager-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.scxh.slider.library.SliderLayout
+                            android:id="@+id/image_slider_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:indicator_visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/wait_Slider_pb"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:src="@drawable/ciist_style2_index_ad3" />-->
+                    <TextView
+                        android:id="@+id/indexOfStyleShowNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/indexOfStyleShowTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:alpha="60"
+                        android:background="#E9E9FF"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#cccccc"
+
+
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:id="@+id/home_playin_malong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ciist_home_title_wanzhuan" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_weight="5"
+                    android:background="#cccccc"
+                    android:paddingBottom="0.5dp"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp">
+
+                    <ImageView
+                        android:id="@+id/home_zhoubian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_zhoubian" />
+
+                    <ImageView
+                        android:id="@+id/home_jingqu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_jingqu" />
+
+                    <ImageView
+                        android:id="@+id/home_zhusu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_zhushu" />
+
+                    <ImageView
+                        android:id="@+id/home_meishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_meishi" />
+
+                    <ImageView
+                        android:id="@+id/home_techan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/home_selector_ontouch"
+                        android:src="@drawable/ciist_home_icon_tecan" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/btnStyle2Index72"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home_seletor_guanli"
+                android:scaleType="centerInside"
+                android:src="@drawable/ciist_home_icon_guanlipingtai" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#f8f8f8"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#ffffff"
+                        android:padding="0.5dp"
+                        android:src="@drawable/ciist_home_title_redian" />
+
+
+                    <com.ciist.customview.xlistview.ScrollListView
+                        android:id="@+id/btnStyle2IndexTodayNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></com.ciist.customview.xlistview.ScrollListView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/home_linear_banquan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:text="@string/banquan"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/zhengfu"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_linear_banquan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/riqi"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</com.ciist.util.RefreshableView>

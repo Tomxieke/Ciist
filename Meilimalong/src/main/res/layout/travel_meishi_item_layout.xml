@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/travel_meishi_item_img"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:background="@color/default_pic_bg_color"
+        android:src="@drawable/default_bg_pic"/>
+    <TextView
+        android:id="@+id/travel_meishi_item_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="马龙烤全羊"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_toRightOf="@id/travel_meishi_item_img"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/travel_meishi_item_content_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="烤全羊是目前肉制品饮食中最健康最环保"
+        android:textSize="14sp"
+        android:textColor="#666"
+        android:layout_toRightOf="@id/travel_meishi_item_img"
+        android:layout_below="@id/travel_meishi_item_title_txt"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/travel_meishi_enter_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11-18"
+        android:textSize="12sp"
+        android:textColor="#999"
+        android:layout_alignBottom="@id/travel_meishi_item_img"
+        android:layout_toRightOf="@id/travel_meishi_item_img"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/travel_meishi_item_click_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="88次"
+        android:textSize="12sp"
+        android:textColor="#999"
+        android:layout_alignBottom="@id/travel_meishi_item_img"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

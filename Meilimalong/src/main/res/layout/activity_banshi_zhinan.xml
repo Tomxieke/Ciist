@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ciist.customview.xlistview.CiistTitleView
+        android:id="@+id/banjianchaxun_titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myview:ciist_left_icn="@drawable/ciist_back"
+        myview:ciist_text_color="#FFF0F5"
+        myview:ciist_title_text="办件查询"
+        myview:ciist_titleview_bg="#d33336" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入申报编号、密码进行查询"
+            android:textColor="#d33336"
+            android:textSize="20sp"
+            android:shadowColor="#000000"
+            android:shadowRadius="5"
+            android:shadowDy="0"
+            android:shadowDx="2"
+
+
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/banshizhinan_bainhao_edi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/banjian_shape"
+            android:hint="申报编号"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/banshizhinan_bainhao_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/banjian_shape"
+            android:hint="查询密码"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:password="true"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查   询"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@drawable/banjian_chaxun"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="服务说明："
+            android:textColor="#000000"
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:text="具有马龙县政务服务网统一办件号的事项，可以在这里查看办件进度。"
+            android:textColor="#000000"
+
+            />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

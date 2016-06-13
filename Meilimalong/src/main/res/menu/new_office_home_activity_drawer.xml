@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/new_office_menu_jiaoban"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="交办工作" />
+        <item
+            android:id="@+id/new_office_menu_chengban"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="承办工作" />
+        <!--<item android:id="@+id/new_office_menu_duban"  android:icon="@android:drawable/ic_menu_slideshow"-->
+        <!--android:title="督办记录" />-->
+        <!--<item android:id="@+id/new_office_menu_cuiban" android:icon="@android:drawable/ic_menu_manage"-->
+        <!--android:title="催办记录" />-->
+
+
+    </group>
+
+    <item android:title="工作监督">
+        <menu>
+            <item
+                android:id="@+id/new_office_menu_zhongdianxiangmu"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="重点项目" />
+            <item
+                android:id="@+id/new_office_menu_zhongdiangongzuo"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="重点工作" />
+            <item
+                android:id="@+id/new_office_menu_bumenliebiao"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="部门工作" />
+            <item
+                android:id="@+id/new_office_menu_zhaoshangyinzi"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="招商引资"
+                />
+        </menu>
+    </item>
+
+    <!--<item android:title="工作交流">-->
+    <!--<menu>-->
+    <!--<item android:id="@+id/new_office_menu_shoudaoxiaoxi"  android:icon="@android:drawable/ic_menu_share"-->
+    <!--android:title="收到消息" />-->
+    <!--<item android:id="@+id/new_office_menu_fasongxiaoxi"  android:icon="@android:drawable/ic_menu_send"-->
+    <!--android:title="发送消息" />-->
+    <!--</menu>-->
+    <!--</item>-->
+
+    <item android:title="数据中心">
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/new_office_menu_shujutongji"-->
+                <!--android:icon="@android:drawable/ic_menu_send"-->
+                <!--android:title="数据统计" />-->
+            <item
+                android:id="@+id/new_office_menu_shujumalong"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="数据马龙" />
+            <item
+                android:id="@+id/new_office_menu_shuju_core"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="重要经济指标" />
+        </menu>
+    </item>
+    <!--<item android:title="招商项目库">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/new_office_menu_niqianyue"-->
+                <!--android:icon="@android:drawable/ic_menu_send"-->
+                <!--android:title="拟签约项目" />-->
+            <!--<item-->
+                <!--android:id="@+id/new_office_menu_yiqianyue"-->
+                <!--android:icon="@android:drawable/ic_menu_send"-->
+                <!--android:title="已签约项目" />-->
+            <!--<item-->
+                <!--android:id="@+id/new_office_menu_zhongdiangengjin"-->
+                <!--android:icon="@android:drawable/ic_menu_send"-->
+                <!--android:title="重点跟进项目" />-->
+            <!--<item-->
+                <!--android:id="@+id/new_office_menu_yitichu"-->
+                <!--android:icon="@android:drawable/ic_menu_send"-->
+                <!--android:title="已剔除项目" />-->
+        <!--</menu>-->
+    <!--</item>-->
+    <item android:title="个人中心">
+        <menu>
+            <item
+                android:id="@+id/new_office_menu_xiugaimima"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="修改密码" />
+            <item
+                android:id="@+id/new_office_menu_zhuxiaoyonghu"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="注销用户" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.ciist.app.NewOfficeFragmentJiaoban">
+
+    <!--<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarSjml"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </android.support.design.widget.AppBarLayout>-->
+    <LinearLayout
+        android:id="@+id/newOfficeShujuTitle"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#3A5FCD">
+
+        <TextView
+            android:id="@+id/newOfficeShujuTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="13dp"
+            android:text="数据马龙"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 搜索 -->
+        <LinearLayout
+            android:id="@+id/newOfficeShuji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/newOfficeShujuEt"
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/coustom_edit_bg"
+                android:gravity="center"
+                android:hint="搜索"
+                android:paddingLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/newOfficeShujuSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@android:drawable/ic_search_category_default" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/newOfficeFl"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="190dp">
+
+            <TextView
+                android:id="@+id/newOfficeShow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                android:text="亲，还没有录入数据哦"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/newOfficeLineChartshuju"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_gravity="center_horizontal" />
+        </FrameLayout>
+
+
+        <!--<com.github.mikephil.charting.charts.BarChart-->
+        <!--android:id="@+id/newOfficeBarChartJiaoban"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+        <!--<Button-->
+        <!--android:id="@+id/btnNewofficeCreateTask"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="交办新工作" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/waitloadingshuju"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="true" />
+
+            <ListView
+                android:id="@+id/newofficeshujulist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

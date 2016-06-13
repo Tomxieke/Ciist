@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey">#ebebeb</color>
+    <color name="darkgrey">#C0C0C0</color>
+    <color name="darkyellow">#FFCC33</color>
+    <color name="recyle_item_text_color">#FFFFFF</color>
+    <color name="line_color">#C2C2C2</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#00FF00</color>
+
+    <!--fragment tab-->
+    <color name="bottom_item_backcolor_default">#FFFFFF</color>
+    <color name="bottom_item_backcolor_hint">#778899</color>
+    <color name="bottom_item_textcolor_default">#A9A9A9</color>
+    <color name="bottom_item_textcolor_hint">#FFFFFF</color>
+
+
+    <!--radioGroup-->
+    <color name="radiobg_press">#43859d</color>
+    <color name="radiobg_normal">#FFFFFF</color>
+    <color name="radiobg_fastBG">#9BCD9B</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#20c993</color>
+    <color name="HelloAdCounter">#FF0000</color>
+
+    <color name="CustomTitleBar">#1abb9a</color>
+    <color name="buttonPressed">#F0F8FF</color>
+    <color name="orange">#CD853F</color>
+    <color name="qingse">#71C671</color>
+
+    <color name="weather_cell1">#ff910c</color>
+    <color name="weather_cell2">#e55026</color>
+    <color name="weather_cell3">#4d4d4d</color>
+    <color name="weather_cell4">#55b37f</color>
+    <color name="weather_cell5">#4e8eb4</color>
+
+    <color name="business_index_btnPress">#01B466</color>
+    <color name="business_index_btn0">#003D79</color>
+    <color name="business_index_btn1">#005AB5</color>
+    <color name="business_index_btn2">#0072E3</color>
+    <color name="business_index_btn3">#2894FF</color>
+
+    <!--阴影分割线  上下颜色 -->
+    <color name="line_bg_up_color">#caf6e8</color>
+    <color name="line_bg_down_color">#1d9b73</color>
+
+    <!-- 按钮透明度颜色-->
+    <color name="btn_alpha">#FFFFF0</color>
+    <color name="selector_igv_bg_press">#F8F8F8</color>
+
+    <!-- 按钮去看看去逛逛颜色 -->
+    <color name="btn_bg_grey_n">#999999</color>
+    <color name="btn_bg_grey_p">#6c6a6a</color>
+    <color name="translation">#00000000</color>
+
+    <color name="tradinghall">#227ab9</color>
+    <color name="lvsetitle">#20c993</color>
+    <color name="hongsetitle">#d33336</color>
+    <color name="menu_bg">#d5d5d5</color>
+    <color name="menu_textcolor">#949494</color>
+
+
+    <color name="servicesearchdialog">#d33336</color>
+
+
+
+
+
+
+    <color name="datamalongnum">#f8f8f8</color>
+    <color name="datamalongziti">#9ff7db</color>
+    <color name="datamalong">#5ee3b9</color>
+    <color name="datamalongxianshi">#FAFAFA   </color>
+
+    <color name="paressed_bg">#f9f9f9</color>
+    <!-- 攻略宝典背景颜色 -->
+    <color name="btn_bg_green_n">#21c995</color>
+    <color name="btn_bg_green_p">#1db183</color>
+
+    <color name="write_bg_shape">#999999</color>
+    <color name="pressed">#cccccc</color>
+    <color name="write_color">#ffffff</color>
+    <color name="default_pic_bg_color">#f6f6f6</color>
+
+
+</resources>

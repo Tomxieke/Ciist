@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+
+    <com.ciist.customview.xlistview.CiistTitleView
+        android:id="@+id/agriculture_titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myview:ciist_left_icn="@drawable/ciist_back"
+        myview:ciist_right_icn="@drawable/ciist_home_search_search"
+        myview:ciist_text_color="#FFF0F5"
+        myview:ciist_title_text="农业"
+        myview:ciist_titleview_bg="#20c993"></com.ciist.customview.xlistview.CiistTitleView>
+    .CiistTitleView
+
+
+    <com.ciist.util.RefreshableView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/agriculture_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2a2a2a"
+        android:orientation="vertical">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:id="@+id/agriculture_scr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f8f8f8"
+            android:scrollbars="none">
+
+<LinearLayout
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#cccccc"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/agriculture_adimageLinerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cccccc"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.scxh.slider.library.SliderLayout
+                            android:id="@+id/agriculture_image_slider_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:indicator_visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/agriculture_wait_Slider_pb"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/agriculture_indexOfStyleShowNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/agriculture_indexOfStyleShowTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:alpha="60"
+                        android:background="#E9E9FF"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <!--农业按钮-->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <com.ciist.customview.xlistview.IGridView
+                        android:id="@+id/agriculture_Igrid_nongye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="5dp"
+                        android:numColumns="3"
+                        android:padding="5dp"
+                        android:verticalSpacing="5dp"></com.ciist.customview.xlistview.IGridView>
+                </LinearLayout>
+
+
+    <!-- 农业快讯 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+
+            <com.ciist.customview.xlistview.CiistSmallTitle
+                android:id="@+id/agriculture_nongyekuaixun_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                myview:ciist_smalltitle_icon_color="#20c993"
+                myview:ciist_smalltitle_title="农业快讯"
+                myview:ciist_smalltitle_right_txt="更多"
+                myview:ciist_smalltitle_txt_color="#333333"
+
+                ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+            <com.ciist.customview.xlistview.ScrollListView
+                android:id="@+id/agriculture_nongyekuaixun_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:divider="#00000000"
+                android:background="#ffffff"></com.ciist.customview.xlistview.ScrollListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+    <!-- 特色产业 -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+
+            <com.ciist.customview.xlistview.CiistSmallTitle
+                android:id="@+id/agriculture_tesechanye_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                myview:ciist_smalltitle_icon_color="#20c993"
+                myview:ciist_smalltitle_title="特色产业"
+                myview:ciist_smalltitle_right_txt="更多"
+                myview:ciist_smalltitle_txt_color="#333333"
+
+                ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+            <com.ciist.customview.xlistview.ScrollListView
+                android:id="@+id/agriculture_tesechanye_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:divider="#00000000"
+                android:background="#ffffff"></com.ciist.customview.xlistview.ScrollListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+<!--政策扶持-->
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+
+            <com.ciist.customview.xlistview.CiistSmallTitle
+                android:id="@+id/agriculture_zhengcefuchi_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                myview:ciist_smalltitle_icon_color="#20c993"
+                myview:ciist_smalltitle_title="政策扶持"
+                myview:ciist_smalltitle_right_txt="更多"
+                myview:ciist_smalltitle_txt_color="#333333"
+
+                ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+            <com.ciist.customview.xlistview.ScrollListView
+                android:id="@+id/agriculture_zhengcefuchi_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:divider="#00000000"
+                android:background="#ffffff"></com.ciist.customview.xlistview.ScrollListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!--农产品供应-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+
+            <com.ciist.customview.xlistview.CiistSmallTitle
+                android:id="@+id/agriculture_nongchanpinggongying_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                myview:ciist_smalltitle_icon_color="#20c993"
+                myview:ciist_smalltitle_title="农产品供应"
+                myview:ciist_smalltitle_right_txt="更多"
+                myview:ciist_smalltitle_txt_color="#333333"
+
+                ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+            <com.ciist.customview.xlistview.ScrollListView
+                android:id="@+id/agriculture_nongchanpinggongying_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:divider="#00000000"
+                android:background="#ffffff"></com.ciist.customview.xlistview.ScrollListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+    <!--农业技术措施-->
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+
+            <com.ciist.customview.xlistview.CiistSmallTitle
+                android:id="@+id/agriculture_nongyejishu_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                myview:ciist_smalltitle_icon_color="#20c993"
+                myview:ciist_smalltitle_title="农业技术措施"
+                myview:ciist_smalltitle_right_txt="更多"
+                myview:ciist_smalltitle_txt_color="#333333"
+
+                ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+            <com.ciist.customview.xlistview.ScrollListView
+                android:id="@+id/agriculture_nongyejishu_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:divider="#00000000"
+                android:background="#ffffff"></com.ciist.customview.xlistview.ScrollListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <!--产业动态-->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcdcdc"
+            android:orientation="vertical">
+
+
+            <com.ciist.customview.xlistview.CiistSmallTitle
+                android:id="@+id/agriculture_chanpingdongtai_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                myview:ciist_smalltitle_icon_color="#20c993"
+                myview:ciist_smalltitle_title="产业动态"
+                myview:ciist_smalltitle_right_txt="更多"
+                myview:ciist_smalltitle_txt_color="#333333"
+
+                ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+
+            <com.ciist.customview.xlistview.ScrollListView
+                android:id="@+id/agriculture_chanpingdongtai_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:divider="#00000000"
+                android:background="#ffffff"></com.ciist.customview.xlistview.ScrollListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/home_linear_banquan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/banquan"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/zhengfu"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_linear_banquan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/riqi"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+        </ScrollView>
+    </com.ciist.util.RefreshableView>
+
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+﻿<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hw.activity.DataCoreActivity" >
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <com.ciist.customview.xlistview.CiistTitleView
+            android:id="@+id/data_core_titleview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            myview:ciist_left_icn="@drawable/ciist_back"
+            myview:ciist_text_color="#FFF0F5"
+            myview:ciist_title_text="数据中心"
+            myview:ciist_titleview_bg="#20c993" />
+
+
+    </LinearLayout>
+
+    <!-- 标题下部分 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 左边列表部分 -->
+
+        <com.ciist.customview.xlistview.XListView
+            android:id="@+id/data_core_llv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:listSelector="@color/translation"
+            android:background="#fafafa"
+            android:choiceMode="singleChoice"
+            android:layout_weight="1" />
+
+        <!-- 右边分析图部分 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#5ee3b9"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- 四个图形按钮 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/data_core_num_tv"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_selector_ontouch"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="数量图"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/data_core_qushi_tv"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_selector_ontouch"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="趋势图"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/data_core_bili_tv"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_selector_ontouch"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="比例图"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/data_core_liebiao_tv"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_selector_ontouch"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="数据列表"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 四个图形显示 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#9ff7db"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:padding="6dp" >
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/data_core_LineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/data_core_BarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/data_core_PieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible" />
+
+                    <com.ciist.customview.xlistview.XListView
+                        android:id="@+id/data_core_rlv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#00000000"
+                        android:dividerHeight="5dp"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

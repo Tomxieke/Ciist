@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <!-- 风格1 小图模式-->
+    <LinearLayout
+        android:id="@+id/ciistAdpStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ciistAdpImg1"
+            android:layout_width="0dip"
+            android:layout_height="70dp"
+            android:layout_weight="1.1"
+            android:contentDescription="@string/action_settings"
+            android:scaleType="centerCrop"
+            android:background="@color/default_pic_bg_color"/>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/ciistAdpContent1"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:gravity="top"
+                android:text="sdaadsdasda"
+                android:textColor="#333333"
+                android:textSize="@dimen/adapter_small_model_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/ciistAdpTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="12sp"
+                    android:text="10-12" />
+
+                <TextView
+                    android:id="@+id/ciistAdpNum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/ciist_home_icon_zan"
+                    android:maxLines="2"
+                    android:textSize="10sp"
+                    android:text="12" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 风格2 大图模式-->
+    <LinearLayout
+        android:id="@+id/ciistAdpStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" >
+        
+        <ImageView 
+            android:id="@+id/ciistAdpImg2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:background="@color/default_pic_bg_color"/>
+        
+        <TextView 
+            android:id="@+id/ciistAdpContent2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:textColor="#333333"
+            android:text="dasdadsdsadsadsad"/>
+        
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/ciistAdpTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="10-12" />
+
+                <TextView
+                    android:id="@+id/ciistAdpNum2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/ciist_home_icon_zan"
+                    android:textSize="10sp"
+                    android:text="12" />
+            </RelativeLayout>
+    </LinearLayout>
+    <!-- 风格3 通知模式-->
+	<LinearLayout
+	    android:id="@+id/ciistAdpStyle3"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:padding="10dp"
+	    android:orientation="vertical">
+	    
+	    <TextView 
+	        android:id="@+id/ciistAdpContent3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:lineSpacingMultiplier="1.2"
+	        android:maxLines="2"
+            android:textColor="#333333"
+	        android:text="dsadsadsada"/>
+	    
+	    <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/ciistAdpTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="10-12" />
+
+                <TextView
+                    android:id="@+id/ciistAdpNum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/ciist_home_icon_zan"
+                    android:textSize="10sp"
+                    android:text="12" />
+            </RelativeLayout>
+	</LinearLayout>
+	<!-- 风格4 左图右字 -->
+	<LinearLayout 
+	    android:id="@+id/ciistAdpStyle4"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+	    android:padding="10dp"
+	    android:visibility="gone"
+	    android:orientation="horizontal">
+	    
+	    <ImageView 
+	        android:id="@+id/ciistAdpImg4"
+	        android:layout_weight="1.1"
+	        android:layout_width="0dip"
+	        android:layout_height="70dp"
+            android:background="@color/default_pic_bg_color"/>
+	    
+	    <TextView 
+	        android:id="@+id/ciistAdpContent4"
+	        android:layout_weight="2.9"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:maxLines="3"
+            android:textColor="#333333"
+	        android:lineSpacingMultiplier="1.2"
+	        android:paddingLeft="10dp"
+	        android:text="sdadasdasdasdasdasd"/>
+	</LinearLayout>
+    <!-- 风格5 导航距离 -->
+    <LinearLayout
+        android:id="@+id/ciistAdpStyle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ciistAdpImg5"
+            android:layout_width="0dip"
+            android:layout_height="70dp"
+            android:layout_weight="1.1"
+            android:contentDescription="@string/action_settings"
+            android:scaleType="centerCrop"
+            android:background="@color/default_pic_bg_color"
+            android:src="@drawable/default_bg_pic"/>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/ciistAdpContent5"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:lineSpacingMultiplier="1.2"
+                android:text="sdaadsdasda"
+                android:textColor="#333333"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ciistAdpjuli5"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:lineSpacingMultiplier="1.2"
+                android:text="sdaadsdasda"
+                android:maxLines="1"
+                android:gravity="bottom"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 风格6 招商 -->
+    <RelativeLayout
+        android:id="@+id/ciistAdpStyle6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:paddingBottom="1dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="1dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/ciistAdpImg6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@color/default_pic_bg_color"
+                    android:src="@drawable/default_bg_pic"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/ciistAdpContent6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="招商"
+                android:textColor="#2E2E2E"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/ciistAdpContent6_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="招商"
+                android:textColor="#454545"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/ciistAdpContent6_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="招商"
+                android:textColor="#454545"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/ciistAdpContent6_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="招商"
+                android:textColor="#454545"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/ciistAdpContent6_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="招商"
+                android:textColor="#454545"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/ciistAdpContent6_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="招商"
+                android:textColor="#454545"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!-- 风格 纯图200 -->
+    <LinearLayout
+        android:id="@+id/ciistAdpStyle7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ciistAdpImg7"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="@color/default_pic_bg_color"
+            android:src="@drawable/default_bg_pic"/>
+
+    </LinearLayout>
+</FrameLayout>

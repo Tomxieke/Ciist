@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/travel_jingxuan_item_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="马龙自驾游"
+            android:textColor="#333"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"/>
+
+       <!-- <TextView
+            android:id="@+id/travel_jingxuan_like_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:paddingLeft="5dp"
+            android:textSize="12sp"
+            android:textColor="#666"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/travel_jingxuan_like_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_bg_travel_dianzan"
+            android:layout_toLeftOf="@id/travel_jingxuan_like_txt"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/travel_jingxuan_item_talk_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:textColor="#666"
+            android:textSize="12sp"
+            android:layout_toLeftOf="@id/travel_jingxuan_like_icon"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/travel_jingxuan_talk_icon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:background="@drawable/selector_bg_travel_pinglun"
+            android:layout_toLeftOf="@id/travel_jingxuan_item_talk_txt"
+            android:layout_centerVertical="true"/>-->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/travel_jingxuan_item_content_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="#666"
+        android:textSize="12sp"
+        android:text="全新自驾游，让你完全融入大自然的怀抱里"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+        <ImageView
+            android:id="@+id/jingxuan_item_img"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:background="@color/default_pic_bg_color"
+            android:src="@drawable/default_bg_pic"/>
+        <!--<ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/two"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/three"/>-->
+    </LinearLayout>
+
+</LinearLayout>

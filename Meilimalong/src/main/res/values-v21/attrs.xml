@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <!--ciist-TitleView-->
+    <declare-styleable name="CiistTitleView">
+        <attr name="ciist_title_text" format="string"/>
+        <attr name="ciist_left_text" format="string"/>
+        <attr name="ciist_right_text" format="string"/>
+        <attr name="ciist_text_color" format="color|reference"/>
+        <attr name="ciist_left_icn" format="reference"/>
+        <attr name="ciist_right_icn" format="reference"/>
+        <attr name="ciist_titleview_bg" format="color|reference"/>
+    </declare-styleable>
+
+    <!--ciist-smallTitle-->
+    <declare-styleable name="CiistSmallTitle">
+        <attr name="ciist_smalltitle_title" format="string"/>
+        <attr name="ciist_smalltitle_icon_color" format="color|reference"/>
+        <attr name="ciist_smalltitle_right_txt" format="string"/>
+        <attr name="ciist_smalltitle_txt_color" format="color|reference"/>
+    </declare-styleable>
+
+    <!--ciist-Webview-->
+    <declare-styleable name="WebViewWithProgress">
+        <attr name="ciist_webviewwithprogress_progressStyle" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="circle" value="1"/>
+        </attr>
+        <attr name="barHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--swipeListview-->
+    <declare-styleable name="SwipeListView">
+        <attr name="swipeOpenOnLongPress" format="boolean"/>
+        <attr name="swipeAnimationTime" format="integer"/>
+        <attr name="swipeOffsetLeft" format="dimension"/>
+        <attr name="swipeOffsetRight" format="dimension"/>
+        <attr name="swipeCloseAllItemsWhenMoveList" format="boolean"/>
+        <attr name="swipeFrontView" format="reference"/>
+        <attr name="swipeBackView" format="reference"/>
+        <attr name="swipeMode" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="both" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="left" value="3"/>
+        </attr>
+        <attr name="swipeActionLeft" format="enum">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr>
+        <attr name="swipeActionRight" format="enum">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr>
+        <attr name="swipeDrawableChecked" format="reference"/>
+        <attr name="swipeDrawableUnchecked" format="reference"/>
+    </declare-styleable>
+
+</resources>

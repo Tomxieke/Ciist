@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ciist.app.IndexOfOAMainActivity">
+
+    <item
+        android:id="@+id/action_refreashOA"
+        android:orderInCategory="100"
+        android:title="刷新"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exitOA"
+        android:orderInCategory="100"
+        android:title="注销当前用户"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_changePwdOA"
+        android:orderInCategory="100"
+        android:title="修改密码"
+        app:showAsAction="never" />
+</menu>

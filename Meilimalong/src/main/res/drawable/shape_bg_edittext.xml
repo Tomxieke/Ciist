@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is a custom edit box background XML file -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="#20c993" />
+
+    <stroke
+        android:width="1sp"
+        android:color="#20c993" />
+    <corners android:radius="5dp"/>
+
+</shape>

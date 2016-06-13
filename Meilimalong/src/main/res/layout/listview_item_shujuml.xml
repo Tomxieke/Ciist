@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+<TableLayout
+    android:stretchColumns="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableRow>
+    <LinearLayout
+android:layout_weight="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/listViewItemsjmlGoing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@android:drawable/presence_invisible"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/listViewItemsjmlGoing2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@android:drawable/presence_online"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/listViewItemSjmlTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自然环境"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+android:layout_weight="1"
+        android:id="@+id/listViewItemSjmlDw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_vertical|right"
+        android:textSize="16sp" />
+    </TableRow>
+</TableLayout>
+</LinearLayout>

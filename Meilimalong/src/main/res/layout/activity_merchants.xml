@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f8f8f8"
+    >
+
+
+
+
+    <com.ciist.customview.xlistview.CiistTitleView
+        android:id="@+id/merchants_titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myview:ciist_titleview_bg="#227ab9"
+        myview:ciist_left_icn="@drawable/ciist_back"
+        myview:ciist_right_icn="@drawable/ciist_home_search_search"
+        myview:ciist_title_text="招商"
+        myview:ciist_text_color="#FFF0F5"></com.ciist.customview.xlistview.CiistTitleView>.CiistTitleView
+
+
+
+
+    <com.ciist.util.RefreshableView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/merchants_refre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2a2a2a"
+        android:orientation="vertical">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/merchants_scr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f8f8f8"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!--交易大图-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ciist_merchants_big_img"/>
+                </RelativeLayout>
+
+
+
+                <!--投资指南-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#f8f8f8"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/merchants_touzizhinan_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#227ab9"
+                            myview:ciist_smalltitle_title="投资指南"
+                            myview:ciist_smalltitle_right_txt="更多"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+                            <com.ciist.customview.xlistview.ScrollListView
+                                android:id="@+id/merchants_touzizhinan_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.5dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:background="#ffffff"
+                                >
+
+                            </com.ciist.customview.xlistview.ScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+                <!-- 投资服务 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#f8f8f8"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/merchants_touzifuwu_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#227ab9"
+                            myview:ciist_smalltitle_title="投资服务"
+                            myview:ciist_smalltitle_right_txt="更多"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+                            <com.ciist.customview.xlistview.ScrollListView
+                                android:id="@+id/merchants_touzifuwu_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.5dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:background="#ffffff"
+                                >
+
+                            </com.ciist.customview.xlistview.ScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!-- 招商项目 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#f8f8f8"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/merchants_zhaoshangxiangmu_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#227ab9"
+                            myview:ciist_smalltitle_title="招商项目"
+                            myview:ciist_smalltitle_right_txt="更多"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+                            <com.ciist.customview.xlistview.ScrollListView
+                                android:id="@+id/merchants_zhaoshangxiangmu_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.5dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:background="#ffffff"
+                                >
+
+                            </com.ciist.customview.xlistview.ScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 投资平台 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#f8f8f8"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/merchants_touzipingtai_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#227ab9"
+                            myview:ciist_smalltitle_title="投资平台"
+                            myview:ciist_smalltitle_right_txt="更多"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+                            <com.ciist.customview.xlistview.ScrollListView
+                                android:id="@+id/merchants_touzipingtai_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.5dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:background="#ffffff"
+                                >
+
+                            </com.ciist.customview.xlistview.ScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- 投资服务机构 -->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#dcdcdc"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#f8f8f8"
+                        android:orientation="vertical">
+
+                        <com.ciist.customview.xlistview.CiistSmallTitle
+                            android:id="@+id/merchants_touzijigou_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            myview:ciist_smalltitle_icon_color="#227ab9"
+                            myview:ciist_smalltitle_title="投资服务机构"
+                            myview:ciist_smalltitle_right_txt="更多"
+                            myview:ciist_smalltitle_txt_color="#333333"
+
+                            ></com.ciist.customview.xlistview.CiistSmallTitle>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+                            <com.ciist.customview.xlistview.ScrollListView
+                                android:id="@+id/merchants_touzijigou_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.5dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:background="#ffffff"
+                                >
+
+                            </com.ciist.customview.xlistview.ScrollListView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/home_linear_banquan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="@string/banquan"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/zhengfu"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_linear_banquan"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/riqi"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ScrollView>
+    </com.ciist.util.RefreshableView>
+
+
+</LinearLayout>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:myview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ciist.customview.xlistview.CiistTitleView
+        android:id="@+id/travel_titleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myview:ciist_left_icn="@drawable/ciist_back"
+        myview:ciist_right_icn="@drawable/ciist_home_search_search"
+        myview:ciist_text_color="#FFF0F5"
+        myview:ciist_title_text="旅游"
+        myview:ciist_titleview_bg="#20c993"></com.ciist.customview.xlistview.CiistTitleView>
+    .CiistTitleView
+
+    <com.ciist.util.RefreshableView
+        android:id="@+id/Travel_refreshableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2a2a2a"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/travel_scorllview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f6f6f6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--图片轮播-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.scxh.slider.library.SliderLayout
+                        android:id="@+id/image_slider_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        custom:indicator_visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="本栏目由马龙县旅游局承办"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- 四大板块部分-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/trave_jingqu_part_img"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/selector_bg_travel_jinqu" />
+
+                    <ImageView
+                        android:id="@+id/trave_zhusu_part_img"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/selector_bg_travel_zhusu" />
+
+                    <ImageView
+                        android:id="@+id/trave_meishi_part_img"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/selector_bg_travel_meishi" />
+
+                    <ImageView
+                        android:id="@+id/trave_techan_part_img"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/selector_bg_travel_techan" />
+
+                </LinearLayout>
+
+                <!--景区推荐部分-->
+
+                <com.ciist.customview.xlistview.CiistSmallTitle
+                    android:id="@+id/travel_jingqu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    myview:ciist_smalltitle_icon_color="#20c993"
+                    myview:ciist_smalltitle_right_txt="去看看"
+                    myview:ciist_smalltitle_title="景点推荐"
+                    myview:ciist_smalltitle_txt_color="#333333"/>
+
+                <RelativeLayout
+                    android:id="@+id/jingqu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="10dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/jingqu_content_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/travel_fengjin_iv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:background="@color/default_pic_bg_color"
+                                android:src="@drawable/default_bg_pic" />
+
+                            <TextView
+                                android:id="@+id/travel_fengjin_tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:text="景区一"
+                                android:textColor="@android:color/white" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+
+                            <ImageView
+                                android:id="@+id/travel_fengjin_iv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:background="@color/default_pic_bg_color"
+                                android:src="@drawable/default_bg_pic" />
+
+                            <TextView
+                                android:id="@+id/travel_fengjin_tv2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@android:color/white" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/jingqu_content_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/jingqu_content_one"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2">
+
+                            <ImageView
+                                android:id="@+id/travel_fengjin_iv3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:background="@color/default_pic_bg_color"
+                                android:src="@drawable/default_bg_pic" />
+
+                            <TextView
+                                android:id="@+id/travel_fengjin_tv3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@android:color/white" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/travel_fengjin_iv4"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:background="@color/default_pic_bg_color"
+                                android:src="@drawable/default_bg_pic" />
+
+                            <TextView
+                                android:id="@+id/travel_fengjin_tv4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@android:color/white" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 广告部分 -->
+                <ImageView
+                    android:id="@+id/travel_guanggao_iv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop" />
+
+                <!--住宿推荐部分-->
+
+                <com.ciist.customview.xlistview.CiistSmallTitle
+                    android:id="@+id/travel_zhushu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    myview:ciist_smalltitle_icon_color="#20c993"
+                    myview:ciist_smalltitle_right_txt="去逛逛"
+                    myview:ciist_smalltitle_title="住宿推荐"
+                    myview:ciist_smalltitle_txt_color="#333333" />
+
+                <RelativeLayout
+                    android:id="@+id/zhusu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="10dp">
+
+
+                    <com.ciist.customview.xlistview.IGridView
+                        android:id="@+id/trave_zhusu_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:horizontalSpacing="5dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="5dp" />
+                </RelativeLayout>
+
+                <!-- 广告部分 -->
+                <ImageView
+                    android:id="@+id/travel_guanggao_iv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop" />
+
+                <!--美食推荐部分-->
+                <com.ciist.customview.xlistview.CiistSmallTitle
+                    android:id="@+id/travel_meishi_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    myview:ciist_smalltitle_icon_color="#20c993"
+                    myview:ciist_smalltitle_right_txt="逛一逛"
+                    myview:ciist_smalltitle_title="美食推荐"
+                    myview:ciist_smalltitle_txt_color="#333333" />
+
+                <RelativeLayout
+                    android:id="@+id/meishi_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="10dp">
+
+
+                    <com.ciist.customview.xlistview.ScrollListView
+                        android:id="@+id/meishi_content_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <!-- 广告部分 -->
+                <ImageView
+                    android:id="@+id/travel_guanggao_iv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop" />
+
+                <!--特产礼品-->
+
+                <com.ciist.customview.xlistview.CiistSmallTitle
+                    android:id="@+id/travel_techan_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    myview:ciist_smalltitle_icon_color="#20c993"
+                    myview:ciist_smalltitle_right_txt="瞧一瞧"
+                    myview:ciist_smalltitle_title="特产推荐"
+                    myview:ciist_smalltitle_txt_color="#333333" />
+
+                <RelativeLayout
+                    android:id="@+id/techan_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="10dp">
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginTop="5dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/travel_techan_recyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="true" />
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+                <!-- 广告部分 -->
+                <ImageView
+                    android:id="@+id/travel_guanggao_iv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop" />
+
+                <!--精选攻略-->
+
+                <com.ciist.customview.xlistview.CiistSmallTitle
+                    android:id="@+id/travel_jingxuan_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    myview:ciist_smalltitle_icon_color="#20c993"
+                    myview:ciist_smalltitle_right_txt="攻略宝典"
+                    myview:ciist_smalltitle_title="精选攻略"
+                    myview:ciist_smalltitle_txt_color="#333333" />
+
+                <RelativeLayout
+                    android:id="@+id/jingxuan_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="10dp">
+
+
+                    <com.ciist.customview.xlistview.ScrollListView
+                        android:id="@+id/travel_jingxuan_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp" />
+                </RelativeLayout>
+
+                <!-- 版权所有 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/home_linear_banquan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:text="@string/banquan"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/zhengfu"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_linear_banquan"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/riqi"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.ciist.util.RefreshableView>
+</LinearLayout>

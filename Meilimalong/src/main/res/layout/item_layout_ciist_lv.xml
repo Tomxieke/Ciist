@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ciistNewslvItemStyle1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+
+    <ImageView
+        android:id="@+id/ciistNewsLvItemImg1"
+        android:layout_width="0dip"
+        android:layout_height="70dp"
+        android:layout_weight="1.2"
+        android:contentDescription="@string/action_settings"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ciist_home_img" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-2dp"
+        android:layout_weight="2.8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ciistNewsLvItemContent1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.2"
+            android:text="sdaadsdasda"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ciistNewsLvItemTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="10-12"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/home_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ciistNewsLvItemTime1"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/ciistNewsLvItemNum1"
+                android:src="@drawable/ciist_home_icon_zan" />
+
+            <TextView
+                android:id="@+id/ciistNewsLvItemNum1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ciistNewsLvItemTime1"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="12"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
